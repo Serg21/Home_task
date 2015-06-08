@@ -1,3 +1,4 @@
+#create projekt
 require 'selenium-webdriver'
 
 def auto_user_as(log)
