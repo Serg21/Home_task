@@ -34,7 +34,8 @@ end
 
 open_home_page
 open_login
-auto_user_as('130765')
+sleep 3
+auto_user_as('447358')
 sleep 3
 open_projekt
 sleep 3

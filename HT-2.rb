@@ -12,4 +12,4 @@ end
 @a.find_element(:class, 'login').click
 sleep 5
 
-auto_user_as(343521)
+auto_user_as(447358)
