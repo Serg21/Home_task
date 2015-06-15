@@ -24,6 +24,6 @@ reg_user_as(@random)
 
 sleep 5
 
-#fail 'Password change failed' if @a.find_element(:id, 'flash_notice').text != 'Account was successfully updated.'
+fail 'Password change failed' if @a.find_element(:id, 'flash_notice').text != 'Account was successfully updated.'
 @a.find_element(:class, 'home').click
 #@a.close

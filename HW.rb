@@ -39,7 +39,7 @@ def choose
   @a.find_element(:name, 'membership[user_ids][]').click
 end
 
- def select_rol # ніяк неможу ініціалізувати ці чекбокси
+ def select_rol # niyak ne mojy inicializyvatu ci checkbox
    @a.find_element(:class, 'box')
    @a.find_element(:name, 'membership[role_ids][]').click
    @a.find_element(:id, 'member-add-submit').click

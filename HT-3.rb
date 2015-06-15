@@ -7,7 +7,7 @@ def auto_user_as(log)
   @a.find_element(:name, 'login').click
   @a.find_element(:class, 'projects').click
   @a.find_element(:class, 'icon-add').click
-  @a.find_element(:id, 'project_name').send_key 'test_project_Serg21'
+  @a.find_element(:id, 'project_name').send_key 'test_project_Serg_21'
   @a.find_element(:id, 'project_description').send_key 'dscription_1'
   @a.find_element(:id, 'project_identifier').send_key 'identifiee_1'
   @a.find_element(:id, 'project_homepage').send_key 'homepage_1'
@@ -18,16 +18,16 @@ end
 @a.get 'http://demo.redmine.org'
 @a.find_element(:class, 'login').click
 
-auto_user_as(447358)
+auto_user_as(636140)
 
-@a.find_element(:class, 'projects').click
+#@a.find_element(:class, 'projects').click
 
-sleep 5
+#sleep 5
 
-@a.find_element(:class, 'icon-add').click
+#@a.find_element(:class, 'icon-add').click
 
-sleep 5
+#sleep 5
 
-@a.find_element(:name, 'commit').click
+#@a.find_element(:name, 'commit').click
 
 #fail 'lol :(' unless @a.find_element(:id, 'flash_notice').text == 'Successful creation.'
