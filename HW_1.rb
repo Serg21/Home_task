@@ -15,6 +15,7 @@ def reg_user_as(log)
   @a.find_element(:name, 'commit').click
 end
 
+
 def change_pass(pass)
   @a.find_element(:class, 'my-account').click
   @a.find_element(:class, 'icon-passwd').click
@@ -23,6 +24,7 @@ def change_pass(pass)
   @a.find_element(:id, 'new_password_confirmation').send_keys pass#'222222'
   @a.find_element(:name, 'commit').click
 end
+
 
 def create_proj(haos)
   @a.find_element(:class, 'projects').click
@@ -69,15 +71,18 @@ def select_rol_reporter
   select_rol_developer.click
   @a.find_element(:id, 'member-add-submit').click
 end
+
+
 @random =7.times.map{Random.rand(9)}.join
 reg_user_as(@random)
 fail 'lol_reg :(' unless @a.find_element(:id, 'flash_notice').text == 'Your account has been activated. You can now log in.'
 sleep 3
+
 change_pass(@random)
 fail 'lol_change:(' unless @a.find_element(:id, 'flash_notice').text == 'Password was successfully updated.'
 sleep 3
 
-@random1 = (0..3).map{('a'..'z').to_a[rand(0..4)]}.join
+@random1 = (0..4).map{('a'..'z').to_a[rand(0..8)]}.join
 create_proj(@random1)
 fail 'lol_create :(' unless @a.find_element(:id, 'flash_notice').text == 'Successful creation.'
 sleep 5
@@ -95,3 +100,5 @@ sleep 3
 select_rol_reporter
 fail 'lol_create_reporter' unless @a.find_element(:id, 'flash_notice').text == 'Successful creation.'
 sleep 3
+
+#@a.close
